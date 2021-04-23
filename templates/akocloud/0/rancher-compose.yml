@@ -1,190 +1,189 @@
 version: "2"
-services:
-  .catalog:
-    name: AKOCLOUD
-    version: 1.0.0
-    description: |
-      Akocloud asset.
-    uuid: akocloud-0
-    questions:
-    - variable: LOGDATA_DIR
-      description: "Log data directory"
-      label: "Log data Storage directory"
-      type: "string"
-    - variable: TMP_DATA_DIR
-      description: "Temporal data directory"
-      label: "Temporal data Storage directory"
-      type: "string"
-    - variable: FILES_DATA_DIR
-      description: "File path data directory"
-      label: "File path data directory"
-      type: "string"
-    - variable: PUBLIC_DATA_DIR
-      description: "Public file path data directory"
-      label: "Public file path data directory"
-      type: "string"
-    - variable: DATA_DIR
-      description: "Data directory"
-      label: "Data Storage directory"
-      type: "string"
-      required: true
-    - variable: MIIMETIQ_AMQP_HOSTNAME
-      description: "Miimetiq amqp hostname"
-      label: "MIIMETIQ hostname"
-      type: "string"
-      required: true
-    - variable: MIIMETIQ_AMQP_USER
-      description: "Miimetiq amqp username"
-      label: "MIIMETIQ username"
-      type: "string"
-      required: true
-    - variable: MIIMETIQ_AMQP_PASSWORD
-      description: "Miimetiq amqp password"
-      label: "MIIMETIQ password"
-      type: "password"
-      required: true
-    - variable: MIIMETIQ_API_URL
-      description: "Miimetiq api URL"
-      label: "MIIMETIQ api URL"
-      type: "string"
-      required: true
-    - variable: MIIMETIQ_API_USER
-      description: "Miimetiq api User"
-      label: "MIIMETIQ api User"
-      type: "string"
-      required: true
-    - variable: MIIMETIQ_API_PASSWORD
-      description: "Miimetiq api Password"
-      label: "MIIMETIQ api Password"
-      type: "password"
-      required: true
-    - variable: CLIENT_URL
-      description: "Client URL"
-      label: "Client Url"
-      type: "string"
-      required: true
-    - variable: API_URL
-      description: "API url"
-      label: "API url"
-      type: "string"
-      required: true
-    - variable: SMTP_USER
-      description: "SMTP user"
-      label: "SMTP user"
-      type: "string"
-      required: true
-    - variable: SMTP_PASS
-      description: "SMTP password"
-      label: "SMTP password"
-      type: "password"
-      required: true
-    - variable: SMTP_HOST
-      description: "SMTP host"
-      label: "SMTP host"
-      type: "string"
-      required: true
-    - variable: SMTP_FROM
-      description: "SMTP From"
-      label: "SMTP From"
-      type: "string"
-      required: true
-    - variable: AKOCLOUD_HOST
-      description: "Akocloud host"
-      label: "Akocloud host"
-      type: "string"
-      required: true
-    - variable: AKOCLOUDH_API_URL
-      description: "Akocloud homologate url"
-      label: "Akocloud homologate url"
-      type: "string"
-      required: true
-    - variable: AWS_KEY
-      description: "AWS key"
-      label: "AWS key"
-      type: "string"
-      required: true
-    - variable: AWS_SECRET_KEY
-      description: "AWS secret key"
-      label: "AWS secret key"
-      type: "string"
-      required: true
-    - variable: AWS_REGION
-      description: "AWS region "
-      label: "AWS region "
-      type: "string"
-      required: true
-    - variable: AWS_BUCKET
-      description: "AWS bucket "
-      label: "AWS bucket "
-      type: "string"
-      required: true
-    - variable: PORT_WS
-      description: "WebSocket port"
-      label: "WebSocket port"
-      type: "string"
-      required: true
-    - variable: PORT_MQTT_TLS
-      description: "MQTTS port secure tls "
-      label: "MQTTS port secure tls "
-      type: "string"
-      required: true
-    - variable: COAP_PORT
-      description: "COAP port"
-      label: "COAP port"
-      type: "string"
-      required: true
-    - variable: EMBRACO_PORT
-      description: "Embraco COAP port"
-      label: "Embraco COAP port"
-      type: "string"
-      required: true
-    - variable: FIREBASE_TOKEN
-      description: "Firebase token"
-      label: "Firebase token"
-      type: "string"
-      required: true
-    - variable: FIREBASE_URL
-      description: "Firebase URL"
-      label: "Firebase URL"
-      type: "string"
-      required: true
-    - variable: HTTP_PORT_SANDBOX
-      description: "SANDBOX port http"
-      label: "SANDBOX port http"
-      type: "string"
-      required: true
-    - variable: COAP_PORT_SANDBOX
-      description: "SANDBOX port COAP"
-      label: "SANDBOX port COAP"
-      type: "string"
-      required: true
-    - variable: MQTT_TLS_PORT_SANDBOX
-      description: "SANDBOX port MQTT TLS"
-      label: "SANDBOX port MQTT TLS"
-      type: "string"
-      required: true
-    - variable: MQTT_PORT_SANDBOX
-      description: "SANDBOX port MQTT"
-      label: "SANDBOX port MQTT"
-      type: "string"
-      required: true
-    - variable: HTTP_WB_PORT_SANDBOX
-      description: "SANDBOX WB port"
-      label: "SANDBOX WB port"
-      type: "string"
-      required: true
-    - variable: AMQP_QUEUE_SUFIX
-      description: "AMQP queue sufix"
-      label: "AMQP queue sufix"
-      type: "string"
-      required: false
-    - variable: SYSTEM_CONTEXT_TOKEN
-      description: "System internal token"
-      label: "System internal token"
-      type: "string"
-      required: true
-    - variable: SYSTEM_APPLICATION_ID
-      description: "System internal application ID"
-      label: "System internal application ID"
-      type: "string"
-      required: true
+catalog:
+  name: AKOCLOUD
+  version: 1.0.0
+  description: |
+    Akocloud asset.
+  uuid: akocloud-0
+  questions:
+  - variable: LOGDATA_DIR
+    description: "Log data directory"
+    label: "Log data Storage directory"
+    type: "string"
+  - variable: TMP_DATA_DIR
+    description: "Temporal data directory"
+    label: "Temporal data Storage directory"
+    type: "string"
+  - variable: FILES_DATA_DIR
+    description: "File path data directory"
+    label: "File path data directory"
+    type: "string"
+  - variable: PUBLIC_DATA_DIR
+    description: "Public file path data directory"
+    label: "Public file path data directory"
+    type: "string"
+  - variable: DATA_DIR
+    description: "Data directory"
+    label: "Data Storage directory"
+    type: "string"
+    required: true
+  - variable: MIIMETIQ_AMQP_HOSTNAME
+    description: "Miimetiq amqp hostname"
+    label: "MIIMETIQ hostname"
+    type: "string"
+    required: true
+  - variable: MIIMETIQ_AMQP_USER
+    description: "Miimetiq amqp username"
+    label: "MIIMETIQ username"
+    type: "string"
+    required: true
+  - variable: MIIMETIQ_AMQP_PASSWORD
+    description: "Miimetiq amqp password"
+    label: "MIIMETIQ password"
+    type: "password"
+    required: true
+  - variable: MIIMETIQ_API_URL
+    description: "Miimetiq api URL"
+    label: "MIIMETIQ api URL"
+    type: "string"
+    required: true
+  - variable: MIIMETIQ_API_USER
+    description: "Miimetiq api User"
+    label: "MIIMETIQ api User"
+    type: "string"
+    required: true
+  - variable: MIIMETIQ_API_PASSWORD
+    description: "Miimetiq api Password"
+    label: "MIIMETIQ api Password"
+    type: "password"
+    required: true
+  - variable: CLIENT_URL
+    description: "Client URL"
+    label: "Client Url"
+    type: "string"
+    required: true
+  - variable: API_URL
+    description: "API url"
+    label: "API url"
+    type: "string"
+    required: true
+  - variable: SMTP_USER
+    description: "SMTP user"
+    label: "SMTP user"
+    type: "string"
+    required: true
+  - variable: SMTP_PASS
+    description: "SMTP password"
+    label: "SMTP password"
+    type: "password"
+    required: true
+  - variable: SMTP_HOST
+    description: "SMTP host"
+    label: "SMTP host"
+    type: "string"
+    required: true
+  - variable: SMTP_FROM
+    description: "SMTP From"
+    label: "SMTP From"
+    type: "string"
+    required: true
+  - variable: AKOCLOUD_HOST
+    description: "Akocloud host"
+    label: "Akocloud host"
+    type: "string"
+    required: true
+  - variable: AKOCLOUDH_API_URL
+    description: "Akocloud homologate url"
+    label: "Akocloud homologate url"
+    type: "string"
+    required: true
+  - variable: AWS_KEY
+    description: "AWS key"
+    label: "AWS key"
+    type: "string"
+    required: true
+  - variable: AWS_SECRET_KEY
+    description: "AWS secret key"
+    label: "AWS secret key"
+    type: "string"
+    required: true
+  - variable: AWS_REGION
+    description: "AWS region "
+    label: "AWS region "
+    type: "string"
+    required: true
+  - variable: AWS_BUCKET
+    description: "AWS bucket "
+    label: "AWS bucket "
+    type: "string"
+    required: true
+  - variable: PORT_WS
+    description: "WebSocket port"
+    label: "WebSocket port"
+    type: "string"
+    required: true
+  - variable: PORT_MQTT_TLS
+    description: "MQTTS port secure tls "
+    label: "MQTTS port secure tls "
+    type: "string"
+    required: true
+  - variable: COAP_PORT
+    description: "COAP port"
+    label: "COAP port"
+    type: "string"
+    required: true
+  - variable: EMBRACO_PORT
+    description: "Embraco COAP port"
+    label: "Embraco COAP port"
+    type: "string"
+    required: true
+  - variable: FIREBASE_TOKEN
+    description: "Firebase token"
+    label: "Firebase token"
+    type: "string"
+    required: true
+  - variable: FIREBASE_URL
+    description: "Firebase URL"
+    label: "Firebase URL"
+    type: "string"
+    required: true
+  - variable: HTTP_PORT_SANDBOX
+    description: "SANDBOX port http"
+    label: "SANDBOX port http"
+    type: "string"
+    required: true
+  - variable: COAP_PORT_SANDBOX
+    description: "SANDBOX port COAP"
+    label: "SANDBOX port COAP"
+    type: "string"
+    required: true
+  - variable: MQTT_TLS_PORT_SANDBOX
+    description: "SANDBOX port MQTT TLS"
+    label: "SANDBOX port MQTT TLS"
+    type: "string"
+    required: true
+  - variable: MQTT_PORT_SANDBOX
+    description: "SANDBOX port MQTT"
+    label: "SANDBOX port MQTT"
+    type: "string"
+    required: true
+  - variable: HTTP_WB_PORT_SANDBOX
+    description: "SANDBOX WB port"
+    label: "SANDBOX WB port"
+    type: "string"
+    required: true
+  - variable: AMQP_QUEUE_SUFIX
+    description: "AMQP queue sufix"
+    label: "AMQP queue sufix"
+    type: "string"
+    required: false
+  - variable: SYSTEM_CONTEXT_TOKEN
+    description: "System internal token"
+    label: "System internal token"
+    type: "string"
+    required: true
+  - variable: SYSTEM_APPLICATION_ID
+    description: "System internal application ID"
+    label: "System internal application ID"
+    type: "string"
+    required: true
