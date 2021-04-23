@@ -51,8 +51,6 @@ services:
       AWS_BUCKET: $AWS_BUCKET
     depends_on:
     - db
-    links:
-    - report
     labels:
       io.rancher.container.hostname_override: container_name
 
