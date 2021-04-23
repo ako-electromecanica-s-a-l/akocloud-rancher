@@ -12,7 +12,7 @@ services:
 
   client:
     restart: always
-    image: akocloud-client:1.0.0
+    image: akocloud/akocloud-client:latest
     volumes:
     - ${LOGDATA_DIR}:/opt/buda/akocloud/logs
     labels:
@@ -20,7 +20,7 @@ services:
 
   api:
     restart: always
-    image: akocloud-api:1.0.0
+    image: akocloud/akocloud-api:1.0.1
     volumes:
     - ${LOGDATA_DIR}/api:/opt/buda/akocloud/logs
     - ${TMP_DATA_DIR}:/opt/buda/akocloud/tmp
